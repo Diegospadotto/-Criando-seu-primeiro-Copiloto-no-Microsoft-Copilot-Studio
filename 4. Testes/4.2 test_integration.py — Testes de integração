@@ -1,0 +1,7 @@
+# tests/test_integration.py
+
+from src.copiloto.api_integration import enviar_dados_api
+
+def test_enviar_dados_api():
+    resposta = enviar_dados_api("https://api.exemplo.com", {"dados": "exemplo"}, "test_api_key")
+    assert resposta.status_code == 200
