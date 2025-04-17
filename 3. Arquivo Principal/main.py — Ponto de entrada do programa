@@ -1,0 +1,16 @@
+# src/main.py
+
+from src.copiloto.copiloto_handler import Copiloto
+from src.config.logger import configurar_logger
+
+def main():
+    logger = configurar_logger()
+    logger.info("Iniciando o Copiloto...")
+
+    copiloto = Copiloto(api_key="sua_chave_de_api_aqui")
+
+    tarefa = input("Qual tarefa você deseja realizar? (enviar_email / agendar_reuniao): ")
+    copiloto.realizar_tarefa(tarefa)
+
+if __name__ == "__main__":
+    main()
