@@ -1,0 +1,3 @@
+src/config/settings.py:
+
+API_KEY = 'sua_chave_aqui'
