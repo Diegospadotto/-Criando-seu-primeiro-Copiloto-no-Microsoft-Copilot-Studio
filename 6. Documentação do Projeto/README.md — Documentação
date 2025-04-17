@@ -1,0 +1,14 @@
+# Copiloto para Automação de Tarefas
+
+Este projeto cria um copiloto inteligente utilizando o Microsoft Copilot Studio para automatizar tarefas como envio de emails e agendamento de reuniões.
+
+## Funcionalidades
+
+- Envio automatizado de emails
+- Agendamento de reuniões em calendários
+
+## Como Usar
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu_usuario/copilot-project.git
