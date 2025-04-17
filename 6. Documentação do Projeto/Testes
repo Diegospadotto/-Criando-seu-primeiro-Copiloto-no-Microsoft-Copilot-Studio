@@ -1,0 +1,3 @@
+Para rodar os testes unitários:
+
+pytest
