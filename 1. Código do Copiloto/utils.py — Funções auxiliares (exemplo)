@@ -1,0 +1,5 @@
+# src/copiloto/utils.py
+
+def formatar_data(data):
+    """Formata a data para o formato desejado (exemplo)."""
+    return data.strftime('%Y-%m-%d %H:%M:%S')
