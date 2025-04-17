@@ -1,0 +1,11 @@
+# src/copiloto/api_integration.py
+
+import requests
+
+def enviar_dados_api(url, dados, api_key):
+    """Envia dados para uma API externa."""
+    try:
+        response = requests.post(url, json=dados, headers={'Authorization': f'Bearer {api_key}'})
+        return response
+    except Exception as e:
+        return f"Erro ao se comunicar com a API: {str(e)}"
