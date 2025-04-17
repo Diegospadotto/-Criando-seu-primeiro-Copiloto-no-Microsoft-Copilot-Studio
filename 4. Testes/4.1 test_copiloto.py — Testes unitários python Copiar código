@@ -1,0 +1,21 @@
+# tests/test_copiloto.py
+
+import pytest
+from src.copiloto.copiloto_handler import Copiloto
+from unittest.mock import patch
+
+@pytest.fixture
+def copiloto():
+    return Copiloto(api_key="test_api_key")
+
+def test_enviar_email(copiloto):
+    with patch('requests.post') as mock_post:
+        mock_post.return_value.status_code = 200
+        copiloto.enviar_email()
+        mock_post.assert_called_once_with("https://api.email.com/send", data={"api_key": "test_api_key"})
+
+def test_agendar_reuniao(copiloto):
+    with patch('requests.post') as mock_post:
+        mock_post.return_value.status_code = 200
+        copiloto.agendar_reuniao()
+        mock_post.assert_called_once_with("https://api.calendar.com/schedule", data={"api_key": "test_api_key"})
